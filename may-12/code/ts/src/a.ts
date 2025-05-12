@@ -277,4 +277,100 @@ const el = getFirstElement(["harkiratSingh", "ramanSingh"]);
 console.log(el.toLowerCase())
 
 
+//pick use for pick type in intefaces or types
 
+interface User {
+    id: string;
+    name: string;
+    age: number;
+    email: string;
+    password: string;
+}
+
+const user: User = {
+    id: "122",
+    name: "keshav",
+    age: 45,
+    email: "keshav@example.com", // Updated email format
+    password: "355055"
+};
+
+type UpdateProps = Pick<User, 'name' | 'email'>;
+
+const displayUserProfile = (user: UpdateProps) => {
+    console.log(`Name: ${user.name}, Email: ${user.email} `);
+};
+
+displayUserProfile(user); // This works since `user` includes 'name' and 'email'
+
+//partial
+
+function updateuser(UpdateProps: updatepropoptional){
+
+}
+type updatepropoptional = Partial<UpdateProps>
+
+updateuser({
+    name : "keshav",
+
+})
+//Readonly
+
+type User1 = {
+    name :  string;
+    age : number;
+}
+
+const user2 : Readonly <User1> = {
+    name : "kehsbv",
+    age : 12
+}
+
+
+//Records and map
+// type Usersss = {
+//     name : string;
+//     username : string
+// }
+
+// type Userss = {
+//     [key: string]:Usersss
+// } 
+
+type Userss = Record<string , {name: string , age:number}>;
+
+
+const userss: Userss = {
+    "resdd@11" : {
+        name : "keshav",
+        age : 12
+    },
+     "resdd@1" : {
+        name : "keshav",
+        age : 12
+    }
+}
+
+const usersss = new Map()
+
+usersss.set("resdd@11" , {
+        name : "keshav",
+        age : 12
+    })
+
+    const userssss = usersss.get("resdd@11")
+
+    //exclude
+
+
+
+
+    type eventtype = 'click' | 'scroll' | 'mousemove';
+    type excludeevent = Exclude<eventtype, 'scroll'>
+    
+    const handleevent = (event:excludeevent)=>{
+        console.log(`Handling event: ${event}` )
+    };
+
+    handleevent('click');//ok
+    // handleevent('scroll'); //error
