@@ -1,4 +1,3 @@
-🚀 Let's go! You've now reached the **Final Phase** — this is where Kubernetes gets real-world powerful with **Ingress, Helm, Autoscaling, Metrics, and Dashboards**.
 
 ---
 
@@ -161,16 +160,3 @@ kubectl delete hpa <name>
 
 ---
 
-✅ **Phase 6 Complete!**
-
-You’ve now mastered:
-
-* 🔗 Ingress Controllers + Ingress Resources
-* 🎛️ Helm Charts (install/custom)
-* 📈 Autoscaling with HPA
-* 📊 Prometheus + Grafana
-* 🖥️ Kubernetes Dashboard (real-time GUI)
-
----
-
-Would you like all 6 phases compiled in one doc or markdown format for reference?
